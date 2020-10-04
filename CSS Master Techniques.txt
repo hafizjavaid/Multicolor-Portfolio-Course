@@ -1,0 +1,68 @@
+ Topic - 1 : How to center a div within parent div.
+
+ Answer:
+
+ Trick-1: (Position)
+ 1) Give position relative to parent div
+ 2) Give position absolute to child div
+ 3) Also top:50%,left:50%,transform:translate(-50%,-50%) for child div.
+
+Trick-2: (Flex)
+1) display:flex;
+justify-content:center;
+align-items:center --> all 3 properties for parent div.
+
+Trick-3: (Grid)
+1) display:grid;
+2) place-items:center --> all 2 properties for parent div.
+
+ Topic - 2 : How to header image with overlay on it.
+
+ Answer:
+
+ ==> background: linear-gradient(rgba(),rgba(),url());
+ By default it will take 50% for each color and direction from top to bottom in order to change just
+
+ ==> background: linear-gradient(to right,rgba(),rgba(),url());
+ ==> background: linear-gradient(to right,rgba() 50%,rgba() 50%,url());
+
+ It means we can also set each color percentages.
+
+  ==> background: linear-gradient(90deg ,rgba() 50%,rgba() 50%,url())
+
+  for different overlays we can use angles and for angles use devtools and inspection and observe different styles.
+
+   Topic - 3 : How to center text within div.
+
+   Trick-1: (Position)
+ 1) Give position relative to parent div
+ 2) Give position absolute to child div
+ 3) Also top:50%,transform:translateY(-50%), width:100%,text-align:center for child div.
+ Trick-2: (Flex)
+1) display:flex;
+justify-content:center;
+align-items:center --> all 3 properties for parent div.
+Trick-3: (Grid)
+1) display:grid;
+2) place-items:center --> all 2 properties for parent div.
+
+ Topic - 4 : How to icon using befor after.
+ 1) content:"code of icon"
+ 2) font-family:"Font Awesome 5 free";
+
+  Topic - 5 : How to use Drop cap.
+ 1) Just use Pesudo elements --> p::first-letter{};
+
+  Topic - 6 : How to transparent the text.
+ 1) Just use h1{
+
+     mix-blend-mode:screen
+ }
+
+But for this must we have to give background color to h1. Bst color will be #fff.
+
+Topic-5 How to filter or get unique values fromm array.
+ let arr = [1, 2, 3, 1, 4, 2, 1, 3, 5];
+
+  const arr2 = arr.filter((value, index) => arr.indexOf(value) == index);
+  console.log(arr2);
